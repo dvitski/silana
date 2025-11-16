@@ -1,0 +1,18 @@
+{
+    "pack": {
+        "description": "",
+        "pack_format": 10,
+        "supported_formats": [
+            81,
+            81
+        ]
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "silana",
+                "path": "enchantment/silana.json"
+            }
+        ]
+    }
+}

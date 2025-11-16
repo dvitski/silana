@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "silana",
+	"version": "${version}",
+	"name": "Silana",
+	"description": "",
+	"authors": [
+		"dvitski"
+	],
+	"contact": {
+		"homepage": "https://dvitski.cc",
+        "sources": "https://github.com/dvitski/silana",
+        "issues": "https://github.com/dvitski/silana/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/silana/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "cc.dvitski.silana.Silana",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "cc.dvitski.silana.client.SilanaClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "cc.dvitski.silana.data.SilanaDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+        "silana.mixins.json",
+		{
+			"config": "silana.client.mixins.json",
+			"environment": "client"
+		}
+	],
+    "accessWidener": "silana.accesswidener",
+	"depends": {
+		"minecraft": "~1.21.10",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
