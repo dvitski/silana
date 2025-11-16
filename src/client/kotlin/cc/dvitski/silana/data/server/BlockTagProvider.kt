@@ -11,8 +11,8 @@ import java.util.concurrent.CompletableFuture
 class BlockTagProvider(output: FabricDataOutput, future: CompletableFuture<HolderLookup.Provider>) : FabricTagProvider.BlockTagProvider(output, future) {
     override fun addTags(provider: HolderLookup.Provider) {
         valueLookupBuilder(SilanaBlockTags.VEINABLE)
-            .forceAddTag(ConventionalBlockTags.ORES)
-            .forceAddTag(ConventionalBlockTags.NATURAL_LOGS)
+            .addOptionalTag(ConventionalBlockTags.ORES)
+            .forceAddTag(BlockTags.LOGS)
             .forceAddTag(BlockTags.LEAVES)
     }
 }
