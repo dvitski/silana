@@ -3,7 +3,7 @@
 	"id": "silana",
 	"version": "${version}",
 	"name": "Silana",
-	"description": "",
+	"description": "Adds vein mining to your tools!",
 	"authors": [
 		"dvitski"
 	],
