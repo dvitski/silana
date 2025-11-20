@@ -11,12 +11,12 @@ import net.minecraft.world.InteractionHand
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.enchantment.EnchantmentHelper
-import net.minecraft.world.level.GameRules
 import net.minecraft.world.level.Level
 import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.block.GameMasterBlock
 import net.minecraft.world.level.block.entity.BlockEntity
 import net.minecraft.world.level.block.state.BlockState
+import net.minecraft.world.level.gamerules.GameRules
 
 object VeinHandler {
     fun handleBlockBreak(level: Level, player: Player, pos: BlockPos, state: BlockState, blockEntity: BlockEntity?): Boolean {
@@ -97,7 +97,7 @@ object VeinHandler {
     }
 
     fun giveStacks(level: ServerLevel, player: Player, stack: ItemStack, positions: Collection<BlockPos>): Boolean {
-        if (player.preventsBlockDrops() || !level.gameRules.getBoolean(GameRules.RULE_DOBLOCKDROPS)) {
+        if (player.preventsBlockDrops() || !level.gameRules.get(GameRules.BLOCK_DROPS)) {
             return false
         }
 
