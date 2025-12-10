@@ -18,7 +18,7 @@ object Silana : ModInitializer {
         PlayerBlockBreakEvents.BEFORE.register(VeinHandler::handleBlockBreak)
     }
 
-    fun <T : Any?> Registry<T>.filterSilanaMod(): List<T> {
+    fun <T : Any> Registry<T>.filterSilanaMod(): List<T> {
         return filter { obj ->
             val location = getKey(obj)
             location?.namespace == MOD_ID
