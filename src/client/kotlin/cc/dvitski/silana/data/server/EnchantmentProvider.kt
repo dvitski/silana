@@ -1,7 +1,7 @@
 package cc.dvitski.silana.data.server
 
 import cc.dvitski.silana.SilanaEnchantments
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider
 import net.minecraft.core.HolderLookup
 import net.minecraft.core.HolderSet
@@ -18,7 +18,7 @@ import java.util.Optional
 import java.util.concurrent.CompletableFuture
 import java.util.function.BiConsumer
 
-class EnchantmentProvider(output: FabricDataOutput, future: CompletableFuture<HolderLookup.Provider>) : FabricCodecDataProvider<Enchantment>(output, future, Registries.ENCHANTMENT, Enchantment.DIRECT_CODEC) {
+class EnchantmentProvider(output: FabricPackOutput, future: CompletableFuture<HolderLookup.Provider>) : FabricCodecDataProvider<Enchantment>(output, future, Registries.ENCHANTMENT, Enchantment.DIRECT_CODEC) {
     override fun configure(consumer: BiConsumer<Identifier, Enchantment>, provider: HolderLookup.Provider) {
         fun register(key: ResourceKey<Enchantment>,
                      enchantment: Enchantment.EnchantmentDefinition,
