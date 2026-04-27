@@ -4,7 +4,7 @@ plugins {
     id("cc.dvitski.gradle.fabric") version "2.0.0+fabric-loom.1.16"
 }
 
-version = "1.0.1"
+version = "1.1.0"
 group = "cc.dvitski"
 
 fabricDsl {

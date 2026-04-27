@@ -24,6 +24,11 @@ object VeinHandler {
             return true
         }
 
+        // check not sneaking
+        if (player.isShiftKeyDown) {
+            return true
+        }
+
         // check veinable
         if (!state.`is`(SilanaBlockTags.VEINABLE)) {
             return true
